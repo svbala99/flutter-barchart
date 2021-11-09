@@ -36,41 +36,41 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-          child: BarChart(BarChartData(
-              borderData: FlBorderData(
-                  border: const Border(
-                top: BorderSide.none,
-                right: BorderSide.none,
-                left: BorderSide(width: 1),
-                bottom: BorderSide(width: 1),
-              )),
-              barGroups: [
-            BarChartGroupData(x: 1, barRods: [
-              BarChartRodData(y: 10, width: 15, colors: [Colors.amber]),
-            ]),
-            BarChartGroupData(x: 2, barRods: [
-              BarChartRodData(y: 9, width: 15, colors: [Colors.amber]),
-            ]),
-            BarChartGroupData(x: 3, barRods: [
-              BarChartRodData(y: 4, width: 15, colors: [Colors.amber]),
-            ]),
-            BarChartGroupData(x: 4, barRods: [
-              BarChartRodData(y: 2, width: 15, colors: [Colors.amber]),
-            ]),
-            BarChartGroupData(x: 5, barRods: [
-              BarChartRodData(y: 13, width: 15, colors: [Colors.amber]),
-            ]),
-            BarChartGroupData(x: 6, barRods: [
-              BarChartRodData(y: 17, width: 15, colors: [Colors.amber]),
-            ]),
-            BarChartGroupData(x: 7, barRods: [
-              BarChartRodData(y: 19, width: 15, colors: [Colors.amber]),
-            ]),
-            BarChartGroupData(x: 8, barRods: [
-              BarChartRodData(y: 21, width: 15, colors: [Colors.amber]),
-            ]),
-          ]))),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+            child: BarChart(BarChartData(
+                titlesData: FlTitlesData(
+                    show: true,
+                    rightTitles: SideTitles(showTitles: false),
+                    // leftTitles: SideTitles(
+                    //     showTitles: true,
+                    //     getTitles: (value) {
+                    //       return value.toString();
+                    //     }),
+                    topTitles: SideTitles(showTitles: false)),
+                borderData: FlBorderData(
+                    border: const Border(
+                  top: BorderSide.none,
+                  right: BorderSide.none,
+                  left: BorderSide(width: 1),
+                  bottom: BorderSide(width: 1),
+                )),
+                barGroups: [
+              BarChartGroupData(x: 1, barRods: [
+                BarChartRodData(y: 1.26, width: 15, colors: [Colors.amber]),
+              ]),
+              BarChartGroupData(x: 2, barRods: [
+                BarChartRodData(y: 0.25, width: 15, colors: [Colors.amber]),
+              ]),
+              BarChartGroupData(x: 3, barRods: [
+                BarChartRodData(y: -0.51, width: 15, colors: [Colors.amber]),
+              ]),
+              BarChartGroupData(x: 4, barRods: [
+                BarChartRodData(y: 0.50, width: 15, colors: [Colors.amber]),
+              ]),
+            ]))),
+      ),
     );
   }
 }
